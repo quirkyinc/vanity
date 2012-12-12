@@ -176,7 +176,7 @@ $stdout << Vanity.playground.load_path
 
   if ENV['DB'] == 'redis'
     def test_default_connection
-      assert_equal "redis://127.0.0.1:6379/0", load_rails(<<-RB)
+      assert_equal "redis://somehost:6379/15", load_rails(<<-RB)
 initializer.after_initialize
 $stdout << Vanity.playground.connection
       RB
